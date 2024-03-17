@@ -1,0 +1,10 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=33f79399_002Dd7b7_002D419d_002Daaf3_002Dcff548162561/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AutomatedTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.AutomatedTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.Model.UnitTests.Invalid_Host_Throws&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.Model.UnitTests.Request_Times_Out&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.Model.UnitTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.UnitTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

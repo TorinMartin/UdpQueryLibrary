@@ -1,0 +1,5 @@
+.idea/
+QueryLibrary/bin/
+QueryLibrary/obj/
+QueryLibraryTests/bin/
+QueryLibraryTests/obj/
