@@ -4,6 +4,14 @@ using QueryLibrary.Models;
 
 namespace QueryLibrary.Services;
 
+public interface IQueryHelper
+{
+    public int PortOffset { get; init; }
+    public Task<UdpClient> CreateClient(IPEndPoint endPoint);
+    public ValueTask<byte[]> BuildRequestAsync(QueryType queryType);
+    public ValueTask<IPEndPoint> GetEndPointAsync(string host, int port);
+}
+
 public class QueryHelper : IQueryHelper
 {
     public int PortOffset { get; init; } = 1;

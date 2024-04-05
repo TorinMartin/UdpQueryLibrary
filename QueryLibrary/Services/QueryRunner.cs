@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using Microsoft.Extensions.Logging;
-using QueryLibrary.Resiliency;
+using QueryLibrary.Utils;
 
 namespace QueryLibrary.Services;
 

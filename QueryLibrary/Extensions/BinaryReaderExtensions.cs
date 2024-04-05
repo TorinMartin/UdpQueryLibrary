@@ -9,7 +9,7 @@ public static class BinaryReaderExtensions
         var bytes = new List<byte>();
         
         byte current;
-        while ((current = br.ReadByte()) != 0)
+        while (br.BaseStream.Position < br.BaseStream.Length && (current = br.ReadByte()) != 0)
         {
             bytes.Add(current);
         }

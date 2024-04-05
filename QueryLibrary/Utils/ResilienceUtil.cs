@@ -2,7 +2,7 @@
 using Polly;
 using Polly.Retry;
 
-namespace QueryLibrary.Resiliency;
+namespace QueryLibrary.Utils;
 
 internal static class ResilienceUtil
 {

@@ -5,7 +5,7 @@ using QueryLibrary.Models;
 
 namespace QueryLibrary;
 
-internal static class ResponseParser
+internal static class ResponseHelper
 {
     public static (TStatusResult Status, List<TPlayerResult>? Players) Parse<TStatusResult, TPlayerResult>(byte[] input, QueryType queryType) 
         where TStatusResult : IServerStatus, new()

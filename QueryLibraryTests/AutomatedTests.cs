@@ -17,9 +17,10 @@ public class AutomatedTests
     public void OneTimeSetup()
     {
         var helper = new QueryHelper();
+        var parser = new ResponseParser();
         _queryRunner = new QueryRunner(helper);
-
-        _queryLibrary = new QueryLibrary.QueryLibrary(_queryRunner, helper);
+        
+        _queryLibrary = new QueryLibrary.QueryLibrary(_queryRunner, helper, parser);
 
     }
     
@@ -45,5 +46,12 @@ public class AutomatedTests
             Assert.That(result.Status, Is.Not.Null);
             Assert.That(result.Players, Is.Null);
         });
+    }
+    
+    [Test]
+    public void Request_Times_Out()
+    {
+        _queryRunner.TimeoutMs = 1;
+        Assert.That(() => _queryLibrary.RunAsync<ServerStatus, Player>("127.0.0.1", 1716), Throws.TypeOf<TimeoutException>());
     }
 }
