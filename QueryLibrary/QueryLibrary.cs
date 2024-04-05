@@ -16,12 +16,14 @@ public class QueryLibrary : IQueryLibrary
 {
     private readonly IQueryRunner _queryRunner;
     private readonly IQueryHelper _queryHelper;
+    private readonly IResponseParser _responseParser;
     private readonly ILogger? _logger;
 
-    public QueryLibrary(IQueryRunner queryRunner, IQueryHelper queryHelper, ILogger? logger = null)
+    public QueryLibrary(IQueryRunner queryRunner, IQueryHelper queryHelper, IResponseParser responseParser, ILogger? logger = null)
     {
         _queryRunner = queryRunner;
         _queryHelper = queryHelper;
+        _responseParser = responseParser;
         _logger = logger;
     }
     
@@ -33,6 +35,7 @@ public class QueryLibrary : IQueryLibrary
         var endPoint = await _queryHelper.GetEndPointAsync(host, port);
         var request = await _queryHelper.BuildRequestAsync(queryType);
         var response = await _queryRunner.QueryServer(endPoint, request);
-        return ResponseParser.Parse<TStatusResult, TPlayerResult>(response, queryType);
+        
+        return _responseParser.Parse<TStatusResult, TPlayerResult>(response, queryType);
     }
 }

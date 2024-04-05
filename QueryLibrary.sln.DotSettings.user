@@ -6,5 +6,7 @@
     &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.Model.UnitTests.Request_Times_Out&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.Model.UnitTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.UnitTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.LibraryTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2983C045-A4C1-4359-9AEE-2FCAD8B190D5::net8.0::QueryLibraryTests.HelperTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
