@@ -8,4 +8,5 @@ public class ServerStatus : IServerStatus
 
     public string hostname { get; set; } = string.Empty;
     public string numplayers { get; set; } = string.Empty;
+    public string mapname { get; set; } = string.Empty;
 }

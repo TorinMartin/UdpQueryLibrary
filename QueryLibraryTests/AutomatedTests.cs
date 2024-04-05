@@ -1,27 +1,32 @@
 using NUnit.Framework;
-using QueryLibrary;
 using QueryLibrary.Models;
+using QueryLibrary.Services;
 using QueryLibraryTests.Model;
 
 namespace QueryLibraryTests;
 
 public class AutomatedTests
 {
-    private const string ValidServerHost = "66.135.10.109";
-    private const int ValidServerPort = 1726;
+    private const string ValidServerHost = "45.77.52.236";
+    private const int ValidServerPort = 1776;
     
-    private QueryRunner _queryRunner = null!;
+    private IQueryRunner _queryRunner = null!;
+    private QueryLibrary.IQueryLibrary _queryLibrary = null!;
     
     [OneTimeSetUp]
     public void OneTimeSetup()
     {
-        _queryRunner = new QueryRunner(portOffset: 1);
+        var helper = new QueryHelper();
+        _queryRunner = new QueryRunner(helper);
+
+        _queryLibrary = new QueryLibrary.QueryLibrary(_queryRunner, helper);
+
     }
     
     [Test]
     public async Task AutomatedTest_Returns_Status_Players()
     {
-        var result = await _queryRunner.RunAsync<ServerStatus, Player>(ValidServerHost, ValidServerPort);
+        var result = await _queryLibrary.RunAsync<ServerStatus, Player>(ValidServerHost, ValidServerPort);
         
         Assert.Multiple(() =>
         {
@@ -33,7 +38,7 @@ public class AutomatedTests
     [Test]
     public async Task AutomatedTest_Players_Is_Null()
     {
-        var result = await _queryRunner.RunAsync<ServerStatus, Player>(ValidServerHost, ValidServerPort, QueryType.Status);
+        var result = await _queryLibrary.RunAsync<ServerStatus, Player>(ValidServerHost, ValidServerPort, QueryType.Status);
         
         Assert.Multiple(() =>
         {
